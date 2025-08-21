@@ -29,7 +29,7 @@ jobs:
 
       - name: Run tests with coverage
         run: |
-          pytest test_app.py --cov=. --cov-report=xml
+          pytest tests/test_app.py --cov=. --cov-report=xml
           mv coverage.xml coverage-${{ matrix.python-version }}.xml
 
       - name: Upload coverage artifact
